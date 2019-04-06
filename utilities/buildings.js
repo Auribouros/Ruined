@@ -16,7 +16,7 @@ window.setInterval(function(){
 	
 	addCookie(1*buildingOneCount);
 	
-}, 1000);
+}, 10000);
 
 
 //Builing two
@@ -32,3 +32,9 @@ function addBuildingTwo(){
     var nextCost = Math.floor(BASE_BUILDING_TWO_COST * Math.pow(1.1,buildingTwoCount));
     document.getElementById('buildingTwoCost').innerHTML = nextCost;
 }
+
+window.setInterval(function(){
+
+    addCookie(2*buildingTwoCount);
+
+}, 1000);
