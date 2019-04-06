@@ -35,6 +35,6 @@ function addBuildingTwo(){
 
 window.setInterval(function(){
 
-    addCookie(2*buildingTwoCount);
+    addCookie(1*buildingTwoCount);
 
 }, 1000);
