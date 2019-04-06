@@ -1,7 +1,8 @@
 async function save(){
     var save = {
         cookies: cookies,
-        buildingOneCount: buildingOneCount
+        buildingOneCount: buildingOneCount,
+        buildingTwoCount: buildingTwoCount
     }
     localStorage.setItem("save",JSON.stringify(save)); 
     document.getElementById("title").innerHTML = "Game Saved !";
@@ -31,4 +32,4 @@ window.setInterval(function(){
 
     save();
 
-}, 900000)
+}, 300000)
