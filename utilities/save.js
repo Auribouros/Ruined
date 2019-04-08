@@ -14,6 +14,7 @@ function load(){
     var savedGame = JSON.parse(localStorage.getItem("save")); 
     if (typeof savedGame.cookies !== "undefined") cookies = savedGame.cookies;
     if (typeof savedGame.buildingOneCount !== "undefined") buildingOneCount = savedGame.buildingOneCount;
+    if (typeof savedGame.buildingTwoCount !== "undefined") buildingTwoCount = savedGame.buildingTwoCount;
     update();
 }
 
