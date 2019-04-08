@@ -4,6 +4,7 @@ function prettify(input){
 }
 
 function magnify(input){
+    var output=0;
     for(i=4; Math.pow(10,i)<input; i=i+3){
         output=Math.floor(input/1000);
         output=output.toFixed(2);
