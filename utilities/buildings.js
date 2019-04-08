@@ -5,11 +5,13 @@ function addBuildingOne(){
     if(cookies>=buildingOneCost){
         buildingOneCount += 1;
         cookies -= buildingOneCost;
-        document.getElementById('buildingOneCount').innerHTML = buildingOneCount;
+        document.getElementById('buildingOneCount').innerHTML = magnify(buildingOneCount);
         document.getElementById('cookieCount').innerHTML = cookies;
+        addCookie(0);
     }
     var nextCost = Math.floor(BASE_BUILDING_ONE_COST * Math.pow(1.1,buildingOneCount));
-    document.getElementById('buildingOneCost').innerHTML = nextCost;
+    document.getElementById('buildingOneCost').innerHTML = magnify(nextCost);
+    addCookie(0);
 }
 
 window.setInterval(function(){
@@ -26,11 +28,13 @@ function addBuildingTwo(){
     if(cookies>=buildingTwoCost){
         buildingTwoCount += 1;
         cookies -= buildingTwoCost;
-        document.getElementById('buildingTwoCount').innerHTML = buildingTwoCount;
+        document.getElementById('buildingTwoCount').innerHTML = magnify(buildingTwoCount);
         document.getElementById('cookieCount').innerHTML = cookies;
+        addCookie(0);
     }
     var nextCost = Math.floor(BASE_BUILDING_TWO_COST * Math.pow(1.1,buildingTwoCount));
-    document.getElementById('buildingTwoCost').innerHTML = nextCost;
+    document.getElementById('buildingTwoCost').innerHTML = magnify(nextCost);
+    addCookie(0);
 }
 
 window.setInterval(function(){
