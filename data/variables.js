@@ -1,5 +1,6 @@
 //Cookie-related variables
 var cookies = 0;
+var cookieCount = 0;
 var numb = 1;
 
 //Building one variables
