@@ -7,6 +7,11 @@
 </head>
 <body onLoad="load()">
 
+    <div class="upgrades">
+        <div class="upgInfoBox square" id=upgClickOne onClick="upgClickOne()">
+            <span class="upgInfo"><b>Clicker Upgrade I</b></br>+1 Cookie per click</br>30 Cookies</span>
+        </div>
+    </div>
     <div class="buildings">
         <button id=buildingOneAdd onClick="addBuildingOne()">Buy Building 1</button></br>
         Building 1 : <span id=buildingOneCount>0</span></br>
@@ -38,5 +43,6 @@
     <script type="text/javascript" src="./utilities/numbers.js"></script>
     <script type="text/javascript" src="./utilities/util.js"></script>
     <script type="text/javascript" src="./utilities/buildings.js"></script>
+    <script type="text/javascript" src="./utilities/upgrades.js"></script>
 </body>
 </html>

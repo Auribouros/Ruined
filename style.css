@@ -24,3 +24,45 @@ div.buildings {
     float: right;
     text-align: right;
 }
+
+.upgInfoBox {
+    position: relative;
+    display: inline-block;
+}
+
+.upgInfoBox .upgInfo {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 110%;
+}
+  
+.upgInfoBox .upgInfo::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent black transparent transparent;
+}
+  
+.upgInfoBox:hover .upgInfo {
+    visibility: visible;
+}
+
+.square{
+    background-color: lightgray;
+    width: 15px;
+    height: 15px;
+    padding: 5px;
+    border: 3px solid black;
+}
