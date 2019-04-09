@@ -1,4 +1,5 @@
 function addCookie(numb) {
+    numb *= clickPower;
     cookies += numb;
     cookies = prettify(cookies);
     cookieCount = cookies;

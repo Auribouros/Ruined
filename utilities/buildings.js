@@ -21,7 +21,7 @@ window.setInterval(function(){
 }, 10000);
 
 
-//Builing two
+//Building two
 
 function addBuildingTwo(){
     buildingTwoCost = Math.floor(BASE_BUILDING_TWO_COST * Math.pow(1.1,buildingTwoCount));

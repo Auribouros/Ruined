@@ -9,13 +9,18 @@
 
     <div class="upgInfo">
         <span id="upgName">Upgrade Name</span></br>
-        <span id="upgInfoText">Upgrade Description</br></br></br></br></span>
-        <span id="upgCost">Cost : ?</span>
+        <span id="upgDesc">Upgrade Description</br></br></br></span></br>
+        Cost : <span id="upgCost">?</span> Cookies
     </div>
 
     <div class="upgrades">
-        <div class="upgIcon square" id=upgClickOne onClick="upgClickOne()">
-        </div>
+        <div class="upgIcon square" id=upgClickOne onClick="upgClickOne()" onMouseOver="updateUpgDesc(1)" onMouseOut="updateUpgDesc(0)"> </div>
+        <div class="upgIcon square" id=upgOneBuildingOne onClick="upgOneBuildingOne()" onMouseOver="updateUpgDesc(2)" onMouseOut="updateUpgDesc(0)"></div>
+        <div class="upgIcon square" id=upgClickTwo onClick="upgClickTwo()" onMouseOver="updateUpgDesc(3)" onMouseOut="updateUpgDesc(0)"></div>
+        <div class="upgIcon square" id=upgClickThree onClick="upgClickThree()" onMouseOver="updateUpgDesc(4)" onMouseOut="updateUpgDesc(0)"></div>
+        <div class="upgIcon square" id=upgTwoBuildingOne onClick="upgTwoBuildingOne()" onMouseOver="updateUpgDesc(5)" onMouseOut="updateUpgDesc(0)"></div>
+        <div class="upgIcon square" id=upgOneBuildingTwo onClick="upgOneBuildingTwo()" onMouseOver="updateUpgDesc(6)" onMouseOut="updateUpgDesc(0)"></div>
+        <div class="upgIcon square" id=upgClickFour onClick="upgClickFour()" onMouseOver="updateUpgDesc(7)" onMouseOut="updateUpgDesc(0)"></div>
     </div>
     
     <div class="buildings">
@@ -45,6 +50,7 @@
     <script type="text/javascript" src="./main.js"></script>
     <script type="text/javascript" src="./data/variables.js"></script>
     <script type="text/javascript" src="./data/notation.js"></script>
+    <script type="text/javascript" src="./data/upgrades.js"></script>
     <script type="text/javascript" src="./utilities/save.js"></script>
     <script type="text/javascript" src="./utilities/numbers.js"></script>
     <script type="text/javascript" src="./utilities/util.js"></script>
