@@ -7,11 +7,17 @@
 </head>
 <body onLoad="load()">
 
+    <div class="upgInfo">
+        <span id="upgName">Upgrade Name</span></br>
+        <span id="upgInfoText">Upgrade Description</br></br></br></br></span>
+        <span id="upgCost">Cost : ?</span>
+    </div>
+
     <div class="upgrades">
-        <div class="upgInfoBox square" id=upgClickOne onClick="upgClickOne()">
-            <span class="upgInfo"><b>Clicker Upgrade I</b></br>+1 Cookie per click</br>30 Cookies</span>
+        <div class="upgIcon square" id=upgClickOne onClick="upgClickOne()">
         </div>
     </div>
+    
     <div class="buildings">
         <button id=buildingOneAdd onClick="addBuildingOne()">Buy Building 1</button></br>
         Building 1 : <span id=buildingOneCount>0</span></br>
@@ -23,7 +29,7 @@
     </div>
 
     <div class="cookieInfo">
-        <img id=cookie class="cookieImg" src="./assets/lemon.png" onClick="addCookie(100000)"/></br>
+        <img id=cookie class="cookieImg" src="./assets/lemon.png" onClick="addCookie(1)"/></br>
         Cookies : <span id=cookieCount>0</span><span id=notation> </span></br>
         Per second : <span id=perSecond>0</span>
     </div>
