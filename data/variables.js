@@ -15,6 +15,7 @@ var buildingTwoCost = 100;
 const BASE_BUILDING_TWO_COST = 100;
 
 //Upgrade variables
+
 const UPG_CLICK_ONE_COST = 50;
 const UPG_CLICK_TWO_COST = 500;
 const UPG_CLICK_THREE_COST = 5000;

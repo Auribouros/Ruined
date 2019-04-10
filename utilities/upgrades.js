@@ -1,15 +1,15 @@
-function updateUpgDesc(numb){
-    document.getElementById("upgName").innerHTML= upgrades[numb][1];
-    document.getElementById("upgDesc").innerHTML= upgrades[numb][2];
-    document.getElementById("upgCost").innerHTML= upgrades[numb][3];
+function updateUpgDesc(upgName){
+    document.getElementById("upgName").innerHTML= upgName.getName();
+    document.getElementById("upgDesc").innerHTML= upgName.getDesc();
+    document.getElementById("upgCost").innerHTML= upgName.getCost();
 }
 
-function upgClickOne(){
-    if(cookies>=UPG_CLICK_ONE_COST){
+function upgClickOneBuy(){
+    if(cookies>=upgClickOne.getCost()){
         clickPower *= 2;
-        cookies -= UPG_CLICK_ONE_COST;
-        remove("upgClickOne");
-        updateUpgDesc(0);
+        cookies -= upgClickOne.getCost();
+        upgClickOne.upgBought();
+        updateUpgDesc(upgDefault);
         addCookie(0);
     }
 }
@@ -19,7 +19,7 @@ function upgClickTwo(){
         clickPower *= 2;
         cookies -= UPG_CLICK_TWO_COST;
         remove("upgClickTwo");
-        updateUpgDesc(0);
+        updateUpgDesc(upgDefault);
         addCookie(0);
     }
 }
@@ -29,7 +29,7 @@ function upgClickThree(){
         clickPower *= 2;
         cookies -= UPG_CLICK_THREE_COST;
         remove("upgClickThree");
-        updateUpgDesc(0);
+        updateUpgDesc(upgDefault);
         addCookie(0);
     }
 }
@@ -39,7 +39,7 @@ function upgClickFour(){
         clickPower *= 2;
         cookies -= UPG_CLICK_FOUR_COST;
         remove("upgClickFour");
-        updateUpgDesc(0);
+        updateUpgDesc(upgDefault);
         addCookie(0);
     }
 }

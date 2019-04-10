@@ -8,3 +8,31 @@ var upgrades = [
     [6,"Building II Upgrade I","Time to automatize all this</br>","1500"],
     [7,"Click Upgrade IV","Using two mice can improve that clicking power</br>","50000"]
 ];
+
+function Upgrade(id,name,desc,cost,isSold=false){
+    this.upgId = id;
+    this.upgName = name;
+    this.upgDesc = desc;
+    this.upgCost = cost;
+    this.upgSold = isSold
+
+    this.isSold = function(){
+        return this.upgSold;
+    }
+    this.upgBought = function(){
+        this.upgSold = true;
+        remove(this.upgId);
+    }
+    this.getName = function(){
+        return this.upgName;
+    }
+    this.getDesc = function(){
+        return this.upgDesc;
+    }
+    this.getCost = function(){
+        return this.upgCost;
+    }
+}
+
+var upgDefault = new Upgrade("default","Upgrade Name","Upgrade Description</br></br></br>","?");
+var upgClickOne = new Upgrade("upgClickOne","Click Upgrade I","Stronger mouse for stronger clicks</br>",50);

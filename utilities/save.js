@@ -1,8 +1,10 @@
 async function save(){
     var save = {
         cookies: cookies,
+        clickPower: clickPower,
         buildingOneCount: buildingOneCount,
-        buildingTwoCount: buildingTwoCount
+        buildingTwoCount: buildingTwoCount,
+        isSold: isSold
     }
     localStorage.setItem("save",JSON.stringify(save)); 
     document.getElementById("title").innerHTML = "Game Saved !";
@@ -15,6 +17,7 @@ function load(){
     if (typeof savedGame.cookies !== "undefined") cookies = savedGame.cookies;
     if (typeof savedGame.buildingOneCount !== "undefined") buildingOneCount = savedGame.buildingOneCount;
     if (typeof savedGame.buildingTwoCount !== "undefined") buildingTwoCount = savedGame.buildingTwoCount;
+    if (typeof savedGame.clickPower !== "undefined") clickPower = savedGame.clickPower;
     update();
 }
 
