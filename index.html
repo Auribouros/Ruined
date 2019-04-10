@@ -14,13 +14,13 @@
     </div>
 
     <div class="upgrades">
-        <div class="upgIcon square" id=upgClickOne onClick="upgClickOneBuy()" onMouseOver="updateUpgDesc(upgClickOne)" onMouseOut="updateUpgDesc(upgDefault)"> </div>
-        <div class="upgIcon square" id=upgOneBuildingOne onClick="upgOneBuildingOne()" onMouseOver="updateUpgDesc(2)" onMouseOut="updateUpgDesc(0)"></div>
-        <div class="upgIcon square" id=upgClickTwo onClick="upgClickTwo()" onMouseOver="updateUpgDesc(3)" onMouseOut="updateUpgDesc(0)"></div>
-        <div class="upgIcon square" id=upgClickThree onClick="upgClickThree()" onMouseOver="updateUpgDesc(4)" onMouseOut="updateUpgDesc(0)"></div>
+        <div class="upgIcon square click" id=upgClickOne onClick="upgClickBuy(1)" onMouseOver="updateUpgDesc(1)" onMouseOut="updateUpgDesc(0)"> </div>
+        <div class="upgIcon square click" id=upgClickTwo onClick="upgClickBuy(2)" onMouseOver="updateUpgDesc(2)" onMouseOut="updateUpgDesc(0)"></div>
+        <div class="upgIcon square" id=upgOneBuildingOne onClick="upgOneBuildingOne()" onMouseOver="updateUpgDesc(3)" onMouseOut="updateUpgDesc(0)"></div>
+        <div class="upgIcon square click" id=upgClickThree onClick="upgClickBuy(3)" onMouseOver="updateUpgDesc(4)" onMouseOut="updateUpgDesc(0)"></div>
         <div class="upgIcon square" id=upgTwoBuildingOne onClick="upgTwoBuildingOne()" onMouseOver="updateUpgDesc(5)" onMouseOut="updateUpgDesc(0)"></div>
         <div class="upgIcon square" id=upgOneBuildingTwo onClick="upgOneBuildingTwo()" onMouseOver="updateUpgDesc(6)" onMouseOut="updateUpgDesc(0)"></div>
-        <div class="upgIcon square" id=upgClickFour onClick="upgClickFour()" onMouseOver="updateUpgDesc(7)" onMouseOut="updateUpgDesc(0)"></div>
+        <div class="upgIcon square click" id=upgClickFour onClick="upgClickFour()" onMouseOver="updateUpgDesc(7)" onMouseOut="updateUpgDesc(0)"></div>
     </div>
     
     <div class="buildings">
@@ -34,7 +34,7 @@
     </div>
 
     <div class="cookieInfo">
-        <img id=cookie class="cookieImg" src="./assets/lemon.png" onClick="addCookie(1)"/></br>
+        <img id=cookie class="cookieImg" src="./assets/lemon.png" onClick="addCookie(1000)"/></br>
         Cookies : <span id=cookieCount>0</span><span id=notation> </span></br>
         Per second : <span id=perSecond>0</span>
     </div>
