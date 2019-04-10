@@ -10,6 +10,7 @@ function upgClickOneBuy(){
         cookies -= upgClickOne.getCost();
         upgClickOne.upgBought();
         updateUpgDesc(upgDefault);
+        allUpgrades[1]=upgClickOne;
         addCookie(0);
     }
 }
