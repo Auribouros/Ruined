@@ -52,6 +52,10 @@ div.upgrades {
     display: inline-block;
 }
 
-.click {
+.upgClick {
     background-color: crimson;
+}
+
+.upgBuild {
+    background-color: aquamarine;
 }
