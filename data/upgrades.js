@@ -26,11 +26,13 @@ function Upgrade(id,name,desc,cost,sold=false){
 var upgDefault = new Upgrade("default","Upgrade Name","Upgrade Description</br></br></br>","?");
 var upgClickOne = new Upgrade("upgClickOne","Click Upgrade I","Stronger mouse for stronger clicks</br>",50);
 var upgClickTwo = new Upgrade("upgClickTwo","Click Upgrade II","Best mouse</br>",500);
+var upgClickThree = new Upgrade("upgClickThree","Click Upgrade III","Bestest</br>",5000);
 
 var allUpgrades = [
     upgDefault,
     upgClickOne,
-    upgClickTwo
+    upgClickTwo,
+    upgClickThree
 ];
 
 /*

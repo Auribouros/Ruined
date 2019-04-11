@@ -14,21 +14,21 @@
     </div>
 
     <div class="upgrades">
-        <div class="upgIcon square click" id=upgClickOne onClick="upgClickBuy(1)" onMouseOver="updateUpgDesc(1)" onMouseOut="updateUpgDesc(0)"> </div>
-        <div class="upgIcon square click" id=upgClickTwo onClick="upgClickBuy(2)" onMouseOver="updateUpgDesc(2)" onMouseOut="updateUpgDesc(0)"></div>
-        <div class="upgIcon square" id=upgOneBuildingOne onClick="upgOneBuildingOne()" onMouseOver="updateUpgDesc(3)" onMouseOut="updateUpgDesc(0)"></div>
-        <div class="upgIcon square click" id=upgClickThree onClick="upgClickBuy(3)" onMouseOver="updateUpgDesc(4)" onMouseOut="updateUpgDesc(0)"></div>
-        <div class="upgIcon square" id=upgTwoBuildingOne onClick="upgTwoBuildingOne()" onMouseOver="updateUpgDesc(5)" onMouseOut="updateUpgDesc(0)"></div>
-        <div class="upgIcon square" id=upgOneBuildingTwo onClick="upgOneBuildingTwo()" onMouseOver="updateUpgDesc(6)" onMouseOut="updateUpgDesc(0)"></div>
-        <div class="upgIcon square click" id=upgClickFour onClick="upgClickFour()" onMouseOver="updateUpgDesc(7)" onMouseOut="updateUpgDesc(0)"></div>
+        <div class="upgIcon square upgClick" id=upgClickOne onClick="upgClickBuy(1)" onMouseOver="updateUpgDesc(1)" onMouseOut="updateUpgDesc(0)"> </div>
+        <div class="upgIcon square upgClick" id=upgClickTwo onClick="upgClickBuy(2)" onMouseOver="updateUpgDesc(2)" onMouseOut="updateUpgDesc(0)"></div>
+        <div class="upgIcon square upgBuild" id=upgOneBuildingOne onClick="upgOneBuildingOne()" onMouseOver="updateUpgDesc(3)" onMouseOut="updateUpgDesc(0)"></div>
+        <div class="upgIcon square upgClick" id=upgClickThree onClick="upgClickBuy(3)" onMouseOver="updateUpgDesc(4)" onMouseOut="updateUpgDesc(0)"></div>
+        <div class="upgIcon square upgBuild" id=upgTwoBuildingOne onClick="upgTwoBuildingOne()" onMouseOver="updateUpgDesc(5)" onMouseOut="updateUpgDesc(0)"></div>
+        <div class="upgIcon square upgBuild" id=upgOneBuildingTwo onClick="upgOneBuildingTwo()" onMouseOver="updateUpgDesc(6)" onMouseOut="updateUpgDesc(0)"></div>
+        <div class="upgIcon square upgClick" id=upgClickFour onClick="upgClickFour()" onMouseOver="updateUpgDesc(7)" onMouseOut="updateUpgDesc(0)"></div>
     </div>
     
     <div class="buildings">
-        <button id=buildingOneAdd onClick="addBuildingOne()">Buy Building 1</button></br>
+        <button id=buildingOne onClick="buyBuilding(1)">Buy Building 1</button></br>
         Building 1 : <span id=buildingOneCount>0</span></br>
         Cost : <span id=buildingOneCost>10</span></br></br>
 
-        <button id=buildingTwoAdd onClick="addBuildingTwo()">Buy Building 2</button></br>
+        <button id=buildingTwoAdd onClick="buyBuilding(2)">Buy Building 2</button></br>
         Building 2 : <span id=buildingTwoCount>0</span></br>
         Cost : <span id=buildingTwoCost>100</span></br></br>
     </div>
@@ -51,6 +51,7 @@
     <script type="text/javascript" src="./data/variables.js"></script>
     <script type="text/javascript" src="./data/notation.js"></script>
     <script type="text/javascript" src="./data/upgrades.js"></script>
+    <script type="text/javascript" src="./data/buildings.js"></script>
     <script type="text/javascript" src="./utilities/save.js"></script>
     <script type="text/javascript" src="./utilities/numbers.js"></script>
     <script type="text/javascript" src="./utilities/util.js"></script>
