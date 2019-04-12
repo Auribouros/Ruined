@@ -1,3 +1,14 @@
+/*
+Constructor used to create an Upgrade object to use later, said object composed of:
+upgId : The ID of the building, often related to the HTML div that will use it
+upgName : The name of the building, used for future display in the HTML
+upgDesc : A short description of the building, used in the HTML
+upgCost : The cost of the building, evolving with each building bought, depends on baseCost and is initialized at 0
+upgSold : The state of the upgrade, boolean initialized at false
+getXX() : Functions to get different attributes of a Building object
+isSold() : Returns if the upgrade is sol or not, useful for load/save mechanisms
+upgBought() : Marks the upgrade as "bought" and removes the div corresponding to it in the HTML
+*/
 function Upgrade(id,name,desc,cost,sold=false){
     this.upgId = id;
     this.upgName = name;
