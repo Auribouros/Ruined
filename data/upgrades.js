@@ -9,35 +9,35 @@ getXX() : Functions to get different attributes of a Building object
 isSold() : Returns if the upgrade is sol or not, useful for load/save mechanisms
 upgBought() : Marks the upgrade as "bought" and removes the div corresponding to it in the HTML
 */
-function Upgrade(id,name,desc,cost,sold=false){
+function Upgrade(id, name, desc, cost, sold = false) {
     this.upgId = id;
     this.upgName = name;
     this.upgDesc = desc;
     this.upgCost = cost;
     this.upgSold = sold;
 
-    this.isSold = function(){
+    this.isSold = function () {
         return this.upgSold;
     }
-    this.upgBought = function(){
+    this.upgBought = function () {
         this.upgSold = true;
         remove(this.upgId);
     }
-    this.getName = function(){
+    this.getName = function () {
         return this.upgName;
     }
-    this.getDesc = function(){
+    this.getDesc = function () {
         return this.upgDesc;
     }
-    this.getCost = function(){
+    this.getCost = function () {
         return this.upgCost;
     }
 }
 
-var upgDefault = new Upgrade("default","Upgrade Name","Upgrade Description</br></br></br>","?");
-var upgClickOne = new Upgrade("upgClickOne","Click Upgrade I","Stronger mouse for stronger clicks</br>",50);
-var upgClickTwo = new Upgrade("upgClickTwo","Click Upgrade II","Best mouse</br>",500);
-var upgClickThree = new Upgrade("upgClickThree","Click Upgrade III","Bestest</br>",5000);
+var upgDefault = new Upgrade("default", "Upgrade Name", "Upgrade Description</br></br></br>", "?");
+var upgClickOne = new Upgrade("upgClickOne", "Click Upgrade I", "Stronger mouse for stronger clicks</br>", 50);
+var upgClickTwo = new Upgrade("upgClickTwo", "Click Upgrade II", "Best mouse</br>", 500);
+var upgClickThree = new Upgrade("upgClickThree", "Click Upgrade III", "Bestest</br>", 5000);
 
 var allUpgrades = [
     upgDefault,

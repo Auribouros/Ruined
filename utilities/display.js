@@ -1,6 +1,7 @@
 function displayStuff() {
-   displayBuilding();
+    displayBuilding();
 }
+
 function displayBuilding() {
     var buildingButton;
     var buildingCost;
@@ -8,9 +9,9 @@ function displayBuilding() {
     var attBuildingButton;
     var attBuildingCost;
     var attBuildingCount;
-    var arrayPos =0;
-    var br= document.createElement("br");
-    
+    var arrayPos = 0;
+    var br = document.createElement("br");
+
     var buildings = document.getElementsByClassName("buildings");
     allBuildings.forEach(element => {
         //create a button to buy a building
@@ -18,8 +19,8 @@ function displayBuilding() {
         attBuildingButton = document.createAttribute("id");
         attBuildingButton.value = element.getId();
         buildingButton.setAttributeNode(attBuildingButton);
-        attBuildingButton= document.createAttribute("onClick");
-        attBuildingButton.value = "buyBuilding("+arrayPos+")";
+        attBuildingButton = document.createAttribute("onClick");
+        attBuildingButton.value = "buyBuilding(" + arrayPos + ")";
         buildingButton.setAttributeNode(attBuildingButton);
         buildingButton.innerHTML = element.getName();
         //create a span to display the cost of the building
@@ -34,13 +35,13 @@ function displayBuilding() {
         attBuildingCount.value = element.getId() + "Count";
         buildingCount.setAttributeNode(attBuildingCount);
         buildingCount.innerHTML = "0";
-    buildings[0].appendChild(buildingButton);
-    buildings[0].innerHTML += "<BR> Buildings : ";
-    buildings[0].appendChild(buildingCount);
-    buildings[0].innerHTML += "<BR> Cost : ";
-    buildings[0].appendChild(buildingCost);
-    buildings[0].innerHTML += "<BR> <BR> ";
-    arrayPos++;
+        buildings[0].appendChild(buildingButton);
+        buildings[0].innerHTML += "<BR> Buildings : ";
+        buildings[0].appendChild(buildingCount);
+        buildings[0].innerHTML += "<BR> Cost : ";
+        buildings[0].appendChild(buildingCost);
+        buildings[0].innerHTML += "<BR> <BR> ";
+        arrayPos++;
     });
     /*
     buildingButton = document.createElement("button");
