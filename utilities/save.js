@@ -1,4 +1,5 @@
 async function save(){
+    //Creating the object "save", used to store all important info inside
     var save = {
         cookies: cookies,
         clickPower: clickPower,
