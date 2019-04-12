@@ -1,10 +1,12 @@
 async function save(){
+    //Creating the object "save", used to store all important info inside
     var save = {
         cookies: cookies,
         clickPower: clickPower,
         buildingOneCount: buildingOneCount,
         buildingTwoCount: buildingTwoCount,
-        allUpgrades: allUpgrades
+        allUpgrades: allUpgrades,
+        allBuildings: allBuildings
     }
     localStorage.setItem("save",JSON.stringify(save)); 
     document.getElementById("title").innerHTML = "Game Saved !";
