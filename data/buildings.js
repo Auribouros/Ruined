@@ -32,13 +32,11 @@ function Building(id,name,desc,cost=0,baseCost=0,count=0){
     }
 }
 
-var buildingDefault = new Building('PLACEHOLDER','PLACEHOLDER','PLACEHOLDER',0,0);
 var buildingOne = new Building('buildingOne','Church','Haha yes',10,10);
 var buildingTwo = new Building('buildingTwo','Monastery','Hm yes',100,100);
 var buildingThree = new Building('buildingThree','wah','Oh no',1000,1000);
 
 var allBuildings = [
-    buildingDefault,
     buildingOne,
     buildingTwo,
     buildingThree

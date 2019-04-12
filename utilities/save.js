@@ -27,10 +27,8 @@ function update(){
     //Update buildings
     for(i=0;i<=allBuildings.length-1;i++){
         allBuildings[i]=new Building(allBuildings[i].bulId,allBuildings[i].bulName,allBuildings[i].bulDesc,allBuildings[i].bulCost,allBuildings[i].bulBaseCost,allBuildings[i].bulCount);
-        if(i>0){
-            document.getElementById(allBuildings[i].getId()+'Count').innerHTML = allBuildings[i].getCount();
-            document.getElementById(allBuildings[i].getId()+'Cost').innerHTML = allBuildings[i].getCost();
-        }
+        document.getElementById(allBuildings[i].getId()+'Count').innerHTML = allBuildings[i].getCount();
+        document.getElementById(allBuildings[i].getId()+'Cost').innerHTML = allBuildings[i].getCost();
     }
     //Update upgrades
     for(i=0;i<=allUpgrades.length-1;i++){

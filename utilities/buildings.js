@@ -14,13 +14,13 @@ function buyBuilding(arrayPos){
 
 window.setInterval(function(){
     
-    addCookie(1*allBuildings[1].getCount());
+    addCookie(1*allBuildings[0].getCount());
     
 }, 10000);
 
 window.setInterval(function(){
 
-    addCookie(1*buildingTwoCount);
+    addCookie(1*allBuildings[1].getCount());
 
 }, 1000);
 
