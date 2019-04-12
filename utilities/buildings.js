@@ -18,7 +18,6 @@ window.setInterval(function(){
     
 }, 10000);
 
-
 window.setInterval(function(){
 
     addCookie(1*buildingTwoCount);

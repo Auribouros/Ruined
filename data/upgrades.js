@@ -33,6 +33,7 @@ var allUpgrades = [
     upgClickOne,
     upgClickTwo,
     upgClickThree
+
 ];
 
 /*

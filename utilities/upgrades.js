@@ -4,7 +4,7 @@ function updateUpgDesc(arrayPos){
     document.getElementById("upgCost").innerHTML= allUpgrades[arrayPos].getCost();
 }
 
-function upgClickBuy(arrayPosition){
+function upgBuy(arrayPosition){
     if(cookies>=allUpgrades[arrayPosition].getCost()){
         clickPower *= 2;
         cookies -= allUpgrades[arrayPosition].getCost();
@@ -13,3 +13,4 @@ function upgClickBuy(arrayPosition){
         addCookie(0);
     }
 }
+
