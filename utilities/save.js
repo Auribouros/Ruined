@@ -2,9 +2,8 @@ async function save(){
     var save = {
         cookies: cookies,
         clickPower: clickPower,
-        buildingOneCount: buildingOneCount,
-        buildingTwoCount: buildingTwoCount,
-        allUpgrades: allUpgrades
+        allUpgrades: allUpgrades,
+        allBuildings: allBuildings
     }
     localStorage.setItem("save",JSON.stringify(save)); 
     document.getElementById("title").innerHTML = "Game Saved !";
@@ -15,10 +14,9 @@ async function save(){
 function load(){
     var savedGame = JSON.parse(localStorage.getItem("save")); 
     if (typeof savedGame.cookies !== "undefined") cookies = savedGame.cookies;
-    if (typeof savedGame.buildingOneCount !== "undefined") buildingOneCount = savedGame.buildingOneCount;
-    if (typeof savedGame.buildingTwoCount !== "undefined") buildingTwoCount = savedGame.buildingTwoCount;
     if (typeof savedGame.clickPower !== "undefined") clickPower = savedGame.clickPower;
     if (typeof savedGame.allUpgrades !== "undefined") allUpgrades = savedGame.allUpgrades;
+    if (typeof savedGame.allBuildings !== "undefined") allBuildings = savedGame.allBuildings;
     update();
 }
 
@@ -26,12 +24,13 @@ function update(){
     //Update cookie count and click power
     document.getElementById("cookieCount").innerHTML = prettify(cookies);
     //Update buildings
-    document.getElementById('buildingOneCount').innerHTML = magnify(buildingOneCount);
-    var nextCost = Math.floor(BASE_BUILDING_ONE_COST * Math.pow(1.1,buildingOneCount));
-    document.getElementById('buildingOneCost').innerHTML = magnify(nextCost);
-    document.getElementById('buildingTwoCount').innerHTML = magnify(buildingTwoCount);
-    var nextCost = Math.floor(BASE_BUILDING_TWO_COST * Math.pow(1.1,buildingTwoCount));
-    document.getElementById('buildingTwoCost').innerHTML = magnify(nextCost);
+    for(i=0;i<=allBuildings.length-1;i++){
+        allBuildings[i]=new Building(allBuildings[i].bulId,allBuildings[i].bulName,allBuildings[i].bulDesc,allBuildings[i].bulCost,allBuildings[i].bulBaseCost,allBuildings[i].bulCount);
+        if(i>0){
+            document.getElementById(allBuildings[i].getId()+'Count').innerHTML = allBuildings[i].getCount();
+            document.getElementById(allBuildings[i].getId()+'Cost').innerHTML = allBuildings[i].getCost();
+        }
+    }
     //Update upgrades
     for(i=0;i<=allUpgrades.length-1;i++){
         allUpgrades[i]=new Upgrade(allUpgrades[i].upgId,allUpgrades[i].upgName,allUpgrades[i].upgDesc,allUpgrades[i].upgCost,allUpgrades[i].upgSold);
