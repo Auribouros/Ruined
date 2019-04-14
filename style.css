@@ -37,6 +37,7 @@ div.buildings {
     position: relative;
     display: block;
     margin-right: 5px;
+    text-align: left;
 }
 
 
