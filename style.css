@@ -21,9 +21,21 @@ div.save {
 }
 
 div.buildings {
-    float: right;
+    left: 79%;
     text-align: right;
+    position: absolute;
+    height: 90%;
 }
+
+.buildingContainer {
+    width: 310%;
+    border: 3px solid black;
+    background-color: lightgray;
+    padding: 5px;
+    position: relative;
+    display: block;
+}
+
 
 div.upgrades {
     position: absolute;
