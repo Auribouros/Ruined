@@ -24,13 +24,13 @@ function load() {
 function update() {
     //Update cookie count and click power
     document.getElementById("cookieCount").innerHTML = prettify(cookies);
-    //Update buildings
+    //Update buildings and setting them all back as Building objects
     for (i = 0; i <= allBuildings.length - 1; i++) {
         allBuildings[i] = new Building(allBuildings[i].bulId, allBuildings[i].bulName, allBuildings[i].bulDesc, allBuildings[i].bulCost, allBuildings[i].bulBaseCost, allBuildings[i].bulCount);
         document.getElementById(allBuildings[i].getId() + 'Count').innerHTML = allBuildings[i].getCount();
         document.getElementById(allBuildings[i].getId() + 'Cost').innerHTML = allBuildings[i].getCost();
     }
-    //Update upgrades
+    //Update upgrades and setting them all back as Upgrade objects
     for (i = 0; i <= allUpgrades.length - 1; i++) {
         allUpgrades[i] = new Upgrade(allUpgrades[i].upgId, allUpgrades[i].upgName, allUpgrades[i].upgDesc, allUpgrades[i].upgCost, allUpgrades[i].upgSold);
         if (allUpgrades[i].isSold()) {
