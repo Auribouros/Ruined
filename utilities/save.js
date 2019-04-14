@@ -26,7 +26,7 @@ function update() {
     document.getElementById("cookieCount").innerHTML = prettify(cookies);
     //Update buildings and setting them all back as Building objects
     for (i = 0; i <= allBuildings.length - 1; i++) {
-        allBuildings[i] = new Building(allBuildings[i].bulId, allBuildings[i].bulName, allBuildings[i].bulDesc, allBuildings[i].bulCost, allBuildings[i].bulBaseCost, allBuildings[i].bulCount);
+        allBuildings[i] = new Building(allBuildings[i].bulId, allBuildings[i].bulName, allBuildings[i].bulDesc, allBuildings[i].bulCost, allBuildings[i].bulBaseCost, allBuildings[i].bulCount, allBuildings[i].bulIncome);
         document.getElementById(allBuildings[i].getId() + 'Count').innerHTML = allBuildings[i].getCount();
         document.getElementById(allBuildings[i].getId() + 'Cost').innerHTML = allBuildings[i].getCost();
     }

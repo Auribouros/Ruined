@@ -12,6 +12,14 @@ function buyBuilding(arrayPos) {
     addCookie(0);
 }
 
+function getTotalIncome() {
+    let income = 0;
+    for(i = 0; i <= allBuildings.length - 1; i++){
+        income += allBuildings[i].getIncome()*allBuildings[i].getCount();
+    }
+    return income;
+}
+
 window.setInterval(function () {
 
     addCookie(1 * allBuildings[0].getCount());

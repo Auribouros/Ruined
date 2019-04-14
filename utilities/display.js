@@ -34,13 +34,13 @@ function displayBuilding() {
         attBuildingCost = document.createAttribute("id");
         attBuildingCost.value = element.getId() + "Cost";
         buildingCost.setAttributeNode(attBuildingCost);
-        buildingCost.innerHTML = "10";
+        buildingCost.innerHTML = element.getCost();
         //Create a span to display the number of building bought
         buildingCount = document.createElement("span");
         attBuildingCount = document.createAttribute("id");
         attBuildingCount.value = element.getId() + "Count";
         buildingCount.setAttributeNode(attBuildingCount);
-        buildingCount.innerHTML = "0";
+        buildingCount.innerHTML = element.getCount();
         //Append everything to the buildings div
         buildingContainer.appendChild(buildingButton);
         buildingContainer.innerHTML += "<BR> Buildings : ";
