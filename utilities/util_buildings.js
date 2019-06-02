@@ -17,12 +17,12 @@ function getTotalIncome() {
     for(i = 0; i <= allBuildings.length - 1; i++){
         income += allBuildings[i].getIncome()*allBuildings[i].getCount();
     }
-    return income;
+    return magnify(prettify(income));
 }
 
 window.setInterval(function () {
 
-    addCookie(1 * allBuildings[0].getCount());
+    addCookie(10 * allBuildings[0].getCount() * allBuildings[0].getIncome());
 
 }, 10000);
 

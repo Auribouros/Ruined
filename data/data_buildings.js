@@ -47,12 +47,15 @@ function Building(id, name, desc, cost = 0, baseCost = 0, count = 0, income = 0)
     this.bulBought = function () {
         this.bulCount += 1;
     }
+    this.setIncome = function (newIncome) {
+        this.bulIncome = newIncome; 
+    }
 }
 
 //Here we declare all Building objects the game holds
 var buildingOne = new Building('buildingOne', 'Church', 'Haha yes', 10, 10, 0, 0.1);
 var buildingTwo = new Building('buildingTwo', 'Monastery', 'Hm yes', 100, 100, 0, 1);
-var buildingThree = new Building('buildingThree', 'wah', 'Oh no', 1000, 1000, 0, 10);
+var buildingThree = new Building('buildingThree', 'Temple', 'Oh no', 1000, 1000, 0, 10);
 
 //Here we set all Building objects created before into the allBuildings array, making building purchasing and saving way easier
 var allBuildings = [
